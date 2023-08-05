@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'messages/index'
-  # get 'root/index'
+  get '/api/message', to: 'message#index', as: 'message'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
   # Defines the root path route ("/")
-  root "root#index"
+  root 'root#index'
+  get '*path', to: 'root#index'
 end
