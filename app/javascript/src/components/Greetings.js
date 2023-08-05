@@ -8,10 +8,10 @@ function Greetings() {
   React.useEffect(() => {
     dispatch(fetchMessage());
   }, []);
-
+console.log(message);
   return (
     <div>
-      <h1>{message.greeting}</h1>
+      <h1>{message}</h1>
     </div>
   );
 }
